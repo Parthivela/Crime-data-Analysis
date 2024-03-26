@@ -3,6 +3,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import pymysql
+import warnings
+warnings.filterwarnings("ignore", message= "pandas only supports SQLAlchemy connectable (engine/connection) or "
+                                           "database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects "
+                                           "are not tested. Please consider using SQLAlchemy.")
 connection=pymysql.connect(host='localhost',user='root',password='Pallu@834',database='Project')
 crime_df = pd.read_sql("select * from crime_data",connection)
 print(crime_df)
