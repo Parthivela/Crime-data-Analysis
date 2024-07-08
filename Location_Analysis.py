@@ -3,7 +3,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pymysql
-connection=pymysql.connect(host='localhost',user='root',password='Pallu@834',database='Project')
+connection=pymysql.connect(host='localhost',user='root',password='Password',database='Project')
 crime_df = pd.read_sql("select * from crime_data",connection)
 
 # to get location counts we have to use group by
@@ -29,18 +29,3 @@ plt.xticks(rotation=45,ha="right")
 # it will adjust the layout
 plt.tight_layout()
 plt.show()
-
-# these are the most crime locations based on my analysis
-# Most crime Locations:
-# Location
-# 800 N ALAMEDA ST      14
-# 700 W 7TH ST          11
-# 300 E 5TH ST           6
-# 1100 S FIGUEROA ST     6
-# 6TH                    6
-# 500 S SAN PEDRO ST     5
-# 600 S SPRING ST        5
-# 100 E 5TH ST           5
-# 7TH ST                 5
-# 700 S FIGUEROA ST      4
-# dtype: int64
