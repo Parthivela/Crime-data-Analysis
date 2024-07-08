@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import pymysql
 
-connection=pymysql.connect(host='localhost',user='root',password='Pallu@834',database='Project')
+connection=pymysql.connect(host='localhost',user='root',password='Password',database='Project')
 crime_df = pd.read_sql("select * from crime_data",connection)
 #print(crime_df)
 #connection.close()
