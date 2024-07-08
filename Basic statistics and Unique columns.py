@@ -11,10 +11,10 @@ warnings.filterwarnings("ignore", message= "pandas only supports SQLAlchemy conn
 # Establishing a connection to the database
 pymysql.connect(host='localhost',
                         user='root',
-                          password='Pallu@834',
+                          password='Password',
                             database='Project')
 # Execute the query and read the results
-connection=pymysql.connect(host='localhost',user='root',password='Pallu@834',database='Project')
+connection=pymysql.connect(host='localhost',user='root',password='Password',database='Project')
 crime_df = pd.read_sql("select * from crime_data",connection)
 print(crime_df)
 connection.close()
