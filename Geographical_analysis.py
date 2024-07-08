@@ -44,5 +44,4 @@ for index, row in crime_df.iterrows():
 crime_map.save('crime_hotspots_map.html')
 
 
-#From this what i have observed was
-#from Hydepark to glendale (in that distribution) are  crime hostpots areas which are proned to crimes
+
