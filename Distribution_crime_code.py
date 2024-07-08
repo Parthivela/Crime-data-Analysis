@@ -9,7 +9,7 @@ import warnings
 warnings.filterwarnings("ignore", message= "pandas only supports SQLAlchemy connectable (engine/connection) or "
                                            "database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects "
                                            "are not tested. Please consider using SQLAlchemy.")
-connection=pymysql.connect(host='localhost',user='root',password='Pallu@834',database='Project')
+connection=pymysql.connect(host='localhost',user='root',password='Password',database='Project')
 crime_df = pd.read_sql("select * from crime_data",connection)
 # grouping the data by crimecode@status@crime_description(counting the occurrences of each unique value)
 code_distribution=crime_df[['Crm_Cd','Status','Crm_Cd_Desc']].value_counts()
