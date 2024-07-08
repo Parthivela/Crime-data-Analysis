@@ -8,7 +8,7 @@ warnings.filterwarnings("ignore", message= "pandas only supports SQLAlchemy conn
                                            "database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects "
                                            "are not tested. Please consider using SQLAlchemy.")
 
-connection=pymysql.connect(host='localhost',user='root',password='Pallu@834',database='Project')
+connection=pymysql.connect(host='localhost',user='root',password='Password',database='Project')
 crime_df = pd.read_sql("select * from crime_data",connection)
 
 # Created a base map and centered at an average location
